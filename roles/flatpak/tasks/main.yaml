@@ -1,19 +1,28 @@
+- name: Add flathub to user
+  community.general.flatpak_remote:
+    flatpakrepo_url: https://flathub.org/repo/flathub.flatpakrepo
+    method: user
+    name: flathub
+    state: present
+
 - name: Install flatpak packages
   community.general.flatpak:
+    method: user
     name:
-      - AnyDesk
-      - Discord
-      - Extensions
-      - Flatseal
-      - FreeTube
-      - Jellyfin Media Player
-      - KeePassXC
-      - Microsoft Teams
-      - Parsec
-      - Syncthing GTK
-      - Telegram Desktop
-      - Thunderbird
-      - Tremotesf
-      - calibre
-      - mpv
+      - com.anydesk.Anydesk
+      - com.calibre_ebook.calibre
+      - com.discordapp.Discord
+      - com.github.iwalton3.jellyfin-media-player
+      - com.github.iwalton3.jellyfin-mpv-shim
+      - com.github.tchx84.Flatseal
+      - com.microsoft.Teams
+      - com.parsecgaming.parsec
+      - io.freetubeapp.FreeTube
+      - io.mpv.Mpv
+      - me.kozec.syncthingtk
+      - org.equeim.Tremotesf
+      - org.gnome.Extensions
+      - org.keepassxc.KeePassXC
+      - org.mozilla.Thunderbird
+      - org.telegram.desktop
     state: present
