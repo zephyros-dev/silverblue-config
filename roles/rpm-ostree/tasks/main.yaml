@@ -1,0 +1,23 @@
+# # NOT WORKING
+# - name: Install software
+#   community.general.rpm_ostree_pkg:
+#     name:
+#       - docker-compose
+#       - gnome-tweaks
+#       - moby-engine
+#     state: present
+# # NOT WORKING EITHER
+# - name: Install software
+#   ansible.builtin.command:
+#     argv:
+#       - /usr/bin/rpm-ostree
+#       - install
+#       - docker-compose
+#       - gnome-tweaks
+#       - moby-engine
+
+# - name: Add user to docker group
+#   ansible.builtin.user:
+#     name: "{{ ansible_user }}"
+#     groups: docker
+#     append: yes

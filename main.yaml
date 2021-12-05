@@ -1,0 +1,6 @@
+- hosts: silverblue
+  tasks:
+    - import_role:
+        name: rpm-ostree
+    - import_role:
+        name: flatpak

@@ -1,0 +1,5 @@
+# Require overlay pip python packages
+# - name: Disable SELinux for docker to work with vscode
+#   ansible.posix.selinux:
+#     policy: targeted
+#     state: permissive

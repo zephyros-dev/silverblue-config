@@ -1,0 +1,3 @@
+creation_rules:
+  - path_regex: .*group_vars.*sops.*
+    age: "age19ycrg4v57swrmzsuffwxlrw7ld26wfttxag3r7qwqq4jaatdeeeq9kmsu2"

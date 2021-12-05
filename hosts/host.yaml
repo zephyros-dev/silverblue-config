@@ -1,0 +1,4 @@
+all:
+  children:
+    silverblue:
+      hosts: host.docker.internal
