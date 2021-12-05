@@ -1,18 +1,19 @@
 - name: Install flatpak packages
   community.general.flatpak:
     name:
-      - Extensions
       - AnyDesk
-      - calibre
       - Discord
+      - Extensions
       - Flatseal
       - FreeTube
       - Jellyfin Media Player
       - KeePassXC
       - Microsoft Teams
-      - mpv
       - Parsec
       - Syncthing GTK
+      - Telegram Desktop
       - Thunderbird
       - Tremotesf
+      - calibre
+      - mpv
     state: present
