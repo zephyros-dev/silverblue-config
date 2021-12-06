@@ -42,3 +42,13 @@ chmod 600 ~/.config/sops/age/keys.txt
 ```
 ansible-playbook main.yaml
 ```
+# Installing Chromium with vaapi support
+1. Add rpm-fusion repository
+```
+rpm-ostree install https://download1.rpmfusion.org/free/fedora/rpmfusion-free-release-$(rpm -E %fedora).noarch.rpm
+```
+2. Install chromium with non-free extension for video playback
+```
+rpm-ostree install chromium-freeworld
+```
+This chromium has no google chrome sync without workaround however

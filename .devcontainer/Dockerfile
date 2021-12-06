@@ -19,7 +19,8 @@ RUN apt update \
     && apt clean -y
 # Ansible
 ARG ANSIBLE_VERSION="5.0.1"
-RUN pip install --no-cache-dir ansible==${ANSIBLE_VERSION}
+ARG ANSIBLE_LINT_VERSION="5.3.0"
+RUN pip install --no-cache-dir ansible==${ANSIBLE_VERSION} ansible-lint==${ANSIBLE_LINT_VERSION}
 # age
 RUN apt update \
     && apt install -y --no-install-recommends \

@@ -1,0 +1,43 @@
+- name: Zerotier data
+  become: true
+  ansible.builtin.file:
+    path: "{{ item }}"
+    state: directory
+  loop:
+    - "{{ zerotier_volume_data }}"
+
+# Doesn't work without root
+- name: Zerotier
+  become: true
+  containers.podman.podman_container:
+    cap_add:
+      - NET_ADMIN
+      - SYS_ADMIN
+    command: "{{ zerotier_network_list }}"
+    device:
+      - /dev/net/tun
+    generate_systemd:
+      container_prefix: ""
+      path: /etc/systemd/system
+      pod_prefix: ""
+      separator: ""
+    network: host
+    image: "{{ zerotier_image }}"
+    labels:
+      io.containers.autoupdate: registry
+    name: zerotier
+    restart_policy: on-failure
+    state: "{{ zerotier_state }}"
+    volumes:
+      - /etc/localtime:/etc/localtime:ro,z
+      - "{{ zerotier_volume_data }}:/var/lib/zerotier-one:U,z"
+
+- name: Enable zerotier systemd
+  become: true
+  ansible.builtin.systemd:
+    name: zerotier
+    daemon_reload: yes
+    enabled: yes
+    state: "{{ zerotier_state }}"
+  register: service
+  until: service.failed == false
