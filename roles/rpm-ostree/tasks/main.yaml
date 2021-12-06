@@ -13,9 +13,10 @@
 #       - /usr/bin/rpm-ostree
 #       - install
 #       - docker-compose
+#       - fish
 #       - gnome-tweaks
 #       - moby-engine
-
+#       - tmux
 # - name: Add user to docker group
 #   ansible.builtin.user:
 #     name: "{{ ansible_user }}"
