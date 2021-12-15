@@ -12,15 +12,18 @@
       - com.anydesk.Anydesk
       - com.calibre_ebook.calibre
       - com.discordapp.Discord
+      - com.github.Eloston.UngoogledChromium
       - com.github.iwalton3.jellyfin-media-player
       - com.github.iwalton3.jellyfin-mpv-shim
       - com.github.tchx84.Flatseal
+      - com.github.wwmm.easyeffects
       - com.microsoft.Teams
       - com.parsecgaming.parsec
       - io.freetubeapp.FreeTube
       - io.mpv.Mpv
       - me.kozec.syncthingtk
       - org.equeim.Tremotesf
+      - org.flameshot.Flameshot
       - org.gnome.Extensions
       - org.jdownloader.JDownloader
       - org.keepassxc.KeePassXC

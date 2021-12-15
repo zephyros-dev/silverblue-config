@@ -17,6 +17,7 @@
 #       - gnome-tweaks
 #       - moby-engine
 #       - tmux
+#       - ffmpeg-libs
 # - name: Add user to docker group
 #   ansible.builtin.user:
 #     name: "{{ ansible_user }}"

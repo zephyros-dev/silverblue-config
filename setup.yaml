@@ -4,5 +4,6 @@
         name: rpm-ostree
     - import_role:
         name: flatpak
+      tags: flatpak
     - import_role:
         name: zerotier
