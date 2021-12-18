@@ -16,11 +16,12 @@
 	},
 	// Add the IDs of extensions you want installed when the container is created.
 	"extensions": [
+		"github.vscode-pull-request-github",
 		"pascalreitermann93.vscode-yaml-sort",
 		"redhat.ansible",
 		"signageos.signageos-vscode-sops",
 		"tyriar.sort-lines",
-		"yzhang.markdown-all-in-one"
+		"yzhang.markdown-all-in-one",
 	],
 	// Use 'forwardPorts' to make a list of ports inside the container available locally.
 	// "forwardPorts": [],

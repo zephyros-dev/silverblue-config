@@ -1,0 +1,27 @@
+applist:
+  - name: com.anydesk.Anydesk
+  - name: com.calibre_ebook.calibre
+  - name: com.discordapp.Discord
+  - name: com.github.Eloston.UngoogledChromium
+  - name: com.github.hluk.copyq
+    startup: true
+  - name: com.github.iwalton3.jellyfin-media-player
+  - name: com.github.iwalton3.jellyfin-mpv-shim
+  - name: com.github.tchx84.Flatseal
+  - name: com.github.wwmm.easyeffects
+  - name: com.microsoft.Teams
+    startup: true
+  - name: com.parsecgaming.parsec
+  - name: info.mumble.Mumble
+  - name: io.freetubeapp.FreeTube
+  - name: io.mpv.Mpv
+  - name: me.kozec.syncthingtk
+    startup: true
+  - name: org.equeim.Tremotesf
+  - name: org.flameshot.Flameshot
+  - name: org.gnome.Extensions
+  - name: org.jdownloader.JDownloader
+  - name: org.keepassxc.KeePassXC
+    startup: true
+  - name: org.mozilla.Thunderbird
+  - name: org.telegram.desktop

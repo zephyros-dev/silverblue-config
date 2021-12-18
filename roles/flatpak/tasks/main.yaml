@@ -9,25 +9,15 @@
   community.general.flatpak:
     method: user
     name:
-      - com.anydesk.Anydesk
-      - com.calibre_ebook.calibre
-      - com.discordapp.Discord
-      - com.github.Eloston.UngoogledChromium
-      - com.github.iwalton3.jellyfin-media-player
-      - com.github.iwalton3.jellyfin-mpv-shim
-      - com.github.tchx84.Flatseal
-      - com.github.wwmm.easyeffects
-      - com.microsoft.Teams
-      - com.parsecgaming.parsec
-      - info.mumble.Mumble
-      - io.freetubeapp.FreeTube
-      - io.mpv.Mpv
-      - me.kozec.syncthingtk
-      - org.equeim.Tremotesf
-      - org.flameshot.Flameshot
-      - org.gnome.Extensions
-      - org.jdownloader.JDownloader
-      - org.keepassxc.KeePassXC
-      - org.mozilla.Thunderbird
-      - org.telegram.desktop
+      - "{{ item.name }}"
     state: present
+  loop: "{{ applist }}"
+
+- name: Add flatpak to startup programs
+  ansible.builtin.file:
+    src: "{{ home_dir }}/.local/share/flatpak/exports/share/applications/{{ item.name }}.desktop"
+    dest: "{{ home_dir }}/.config/autostart/{{ item.name }}.desktop"
+    state: link
+    mode: "0644"
+  loop: "{{ applist }}"
+  when: item.startup is defined and item.startup
