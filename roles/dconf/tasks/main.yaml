@@ -1,0 +1,10 @@
+- name: Add default shortcut
+  community.general.dconf:
+    key: "{{ item.key }}"
+    value: "{{ item.value }}"
+  loop: "{{ shortcut.flameshot }}"
+
+- name: Enable custom keybindings
+  community.general.dconf:
+    key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings"
+    value: "['/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/flameshot/']"

@@ -2,8 +2,12 @@
   tasks:
     - import_role:
         name: rpm-ostree
+      tags: rpm-ostree
     - import_role:
         name: flatpak
       tags: flatpak
+    - import_role:
+        name: dconf
+      tags: dconf
     - import_role:
         name: zerotier

@@ -1,10 +1,16 @@
 # # NOT WORKING
-# - name: Install software
+# - name: Overlay software
 #   community.general.rpm_ostree_pkg:
 #     name:
 #       - docker-compose
 #       - gnome-tweaks
 #       - moby-engine
+#       - ffmpeg-libs
+#       - fish
+#       - gnome-tweaks
+#       - moby-engine
+#       - python-psutil
+#       - tmux
 #     state: present
 # # NOT WORKING EITHER
 # - name: Install software
@@ -13,13 +19,14 @@
 #       - /usr/bin/rpm-ostree
 #       - install
 #       - docker-compose
+#       - ffmpeg-libs
 #       - fish
 #       - gnome-tweaks
 #       - moby-engine
+#       - python-psutil
 #       - tmux
-#       - ffmpeg-libs
-# - name: Add user to docker group
-#   ansible.builtin.user:
-#     name: "{{ ansible_user }}"
-#     groups: docker
-#     append: yes
+- name: Add user to docker group
+  ansible.builtin.user:
+    name: "{{ ansible_user }}"
+    groups: docker
+    append: yes

@@ -1,0 +1,8 @@
+shortcut:
+  flameshot:
+    - key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/flameshot/name"
+      value: "'flameshot'"
+    - key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/flameshot/command"
+      value: "'flatpak run org.flameshot.Flameshot gui'"
+    - key: "/org/gnome/settings-daemon/plugins/media-keys/custom-keybindings/flameshot/binding"
+      value: "'<Shift><Super>s'"
