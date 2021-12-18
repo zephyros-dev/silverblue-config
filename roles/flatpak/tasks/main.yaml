@@ -19,6 +19,7 @@
       - com.github.wwmm.easyeffects
       - com.microsoft.Teams
       - com.parsecgaming.parsec
+      - info.mumble.Mumble
       - io.freetubeapp.FreeTube
       - io.mpv.Mpv
       - me.kozec.syncthingtk
