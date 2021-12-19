@@ -3,12 +3,13 @@
 #   community.general.rpm_ostree_pkg:
 #     name:
 #       - docker-compose
-#       - gnome-tweaks
-#       - moby-engine
 #       - ffmpeg-libs
 #       - fish
 #       - gnome-tweaks
+#       - gnome-tweaks
 #       - moby-engine
+#       - moby-engine
+#       - openssl
 #       - python-psutil
 #       - tmux
 #     state: present
@@ -22,7 +23,10 @@
 #       - ffmpeg-libs
 #       - fish
 #       - gnome-tweaks
+#       - gnome-tweaks
 #       - moby-engine
+#       - moby-engine
+#       - openssl
 #       - python-psutil
 #       - tmux
 - name: Add user to docker group

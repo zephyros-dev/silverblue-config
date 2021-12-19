@@ -42,6 +42,10 @@ chmod 600 ~/.config/sops/age/keys.txt
 ```
 ansible-playbook main.yaml
 ```
+# Software
+## KDE Phone Connector
+1. Overlay openssl
+2. Install [GSConnector](https://extensions.gnome.org/extension/1319/gsconnect/)
 # Installing Chromium with vaapi support
 1. Add rpm-fusion repository
 ```
