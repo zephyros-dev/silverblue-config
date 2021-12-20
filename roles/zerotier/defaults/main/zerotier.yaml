@@ -1,4 +1,4 @@
-zerotier_volume: "/home/{{ ansible_user }}/volume/zerotier"
+zerotier_volume: "{{ home_dir }}/volume/zerotier"
 zerotier_volume_data: "{{ zerotier_volume }}/data"
 zerotier_state: started
 zerotier_network_list: secret

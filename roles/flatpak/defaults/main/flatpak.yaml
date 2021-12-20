@@ -19,6 +19,7 @@ applist:
     startup: true
   - name: org.equeim.Tremotesf
   - name: org.flameshot.Flameshot
+    startup: true
   - name: org.gnome.Extensions
   - name: org.jdownloader.JDownloader
   - name: org.keepassxc.KeePassXC

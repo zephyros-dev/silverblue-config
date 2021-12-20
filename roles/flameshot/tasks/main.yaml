@@ -1,0 +1,8 @@
+- name: Config flameshot
+  community.general.ini_file:
+    mode: "0600"
+    no_extra_spaces: true
+    option: showHelp
+    path: "{{ home_dir }}/.var/app/org.flameshot.Flameshot/config/flameshot/flameshot.ini"
+    section: General
+    value: "false"
