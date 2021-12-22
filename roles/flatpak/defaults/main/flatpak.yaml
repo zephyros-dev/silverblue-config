@@ -25,4 +25,5 @@ applist:
   - name: org.keepassxc.KeePassXC
     startup: true
   - name: org.mozilla.Thunderbird
+  - name: org.onlyoffice
   - name: org.telegram.desktop
