@@ -1,0 +1,7 @@
+flameshot_config:
+  - option: showHelp
+    section: General
+    value: "false"
+  - option: showStartupLaunchMessage
+    section: General
+    value: "false"

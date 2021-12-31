@@ -1,0 +1,8 @@
+- name: Configure {{ main_loop_var.section }} {{ main_loop_var.option }}
+  community.general.ini_file:
+    mode: "0600"
+    no_extra_spaces: true
+    path: "{{ home_dir }}/.var/app/org.flameshot.Flameshot/config/flameshot/flameshot.ini"
+    option: "{{ main_loop_var.option }}"
+    section: "{{ main_loop_var.section }}"
+    value: "{{ main_loop_var.value }}"
