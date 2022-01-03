@@ -1,0 +1,5 @@
+- name: Template amd gpu config
+  ansible.builtin.template:
+    src: 20-amdgpu.conf
+    dest: /etc/X11/xorg.conf.d/20-amdgpu.conf
+  become: true
