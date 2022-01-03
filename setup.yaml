@@ -17,3 +17,6 @@
     - import_role:
         name: amd_gpu
       tags: amd_gpu
+    - import_role:
+        name: smb_mount
+      tags: smb_mount

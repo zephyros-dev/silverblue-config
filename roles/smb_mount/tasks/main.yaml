@@ -1,0 +1,33 @@
+# - name: Create mount point
+#   ansible.builtin.file:
+#     path: /mnt/smb/storage
+#     state: directory
+#     owner: "{{ ansible_user }}"
+#     group: "{{ ansible_user }}"
+#   become: true
+
+- name: Generate authentication
+  community.general.ini_file:
+    path: "{{ ansible_user_dir }}/.smb"
+    section: null
+    option: "{{ item.option }}"
+    value: "{{ item.value }}"
+    mode: "0600"
+    no_extra_spaces: true
+    backup: true
+  loop:
+    - option: user
+      value: "{{ smb_user }}"
+    - option: password
+      value: "{{ smb_password }}"
+  no_log: true
+
+- name: Create persistent smb network mounts
+  ansible.posix.mount:
+    path: /mnt/smb/storage
+    src: //server.lan/storage
+    fstype: cifs
+    opts: "uid={{ ansible_effective_user_id }},gid={{ ansible_effective_group_id }},credentials={{ ansible_user_dir }}/.smb,iocharset=utf8,noperm"
+    state: mounted
+    backup: true
+  become: true
