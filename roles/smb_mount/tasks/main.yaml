@@ -22,12 +22,13 @@
       value: "{{ smb_password }}"
   no_log: true
 
+# Require nobrl for no lock sqlite database to mount calibre. https://www.mobileread.com/forums/showpost.php?s=3b6d82203ea9ba61a43597173c13ee5f&p=607266&postcount=3
 - name: Create persistent smb network mounts
   ansible.posix.mount:
     path: /mnt/smb/storage
     src: //server.lan/storage
     fstype: cifs
-    opts: "uid={{ ansible_effective_user_id }},gid={{ ansible_effective_group_id }},credentials={{ ansible_user_dir }}/.smb,iocharset=utf8,noperm"
+    opts: "uid={{ ansible_effective_user_id }},gid={{ ansible_effective_group_id }},credentials={{ ansible_user_dir }}/.smb,nobrl,noperm"
     state: mounted
     backup: true
   become: true
