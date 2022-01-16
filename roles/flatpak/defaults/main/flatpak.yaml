@@ -9,6 +9,7 @@ applist:
   - name: com.github.iwalton3.jellyfin-mpv-shim
   - name: com.github.tchx84.Flatseal
   - name: com.github.wwmm.easyeffects
+  - name: com.moonlight_stream.Moonlight
   - name: com.microsoft.Teams
     startup: true
   - name: com.parsecgaming.parsec
