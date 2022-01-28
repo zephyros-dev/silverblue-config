@@ -1,34 +1,20 @@
-# # NOT WORKING
-# - name: Overlay software
-#   community.general.rpm_ostree_pkg:
-#     name:
-#       - docker-compose
-#       - ffmpeg-libs
-#       - fish
-#       - gnome-tweaks
-#       - gnome-tweaks
-#       - moby-engine
-#       - moby-engine
-#       - openssl
-#       - python-psutil
-#       - tmux
-#     state: present
-# # NOT WORKING EITHER
-# - name: Install software
-#   ansible.builtin.command:
-#     argv:
-#       - /usr/bin/rpm-ostree
-#       - install
-#       - docker-compose
-#       - ffmpeg-libs
-#       - fish
-#       - gnome-tweaks
-#       - gnome-tweaks
-#       - moby-engine
-#       - moby-engine
-#       - openssl
-#       - python-psutil
-#       - tmux
+- name: Overlay software
+  community.general.rpm_ostree_pkg:
+    name:
+      - docker-compose
+      - ffmpeg-libs
+      - fish
+      - gnome-tweaks
+      - gnome-tweaks
+      - moby-engine
+      - moby-engine
+      - openssl
+      - python-psutil
+      - tmux
+      - wireguard-tools
+    state: present
+  become: true
+
 - name: Add user to docker group
   ansible.builtin.user:
     name: "{{ ansible_user }}"

@@ -1,3 +1,4 @@
+---
 applist:
   - name: com.anydesk.Anydesk
   - name: com.calibre_ebook.calibre
@@ -10,6 +11,8 @@ applist:
   - name: com.github.tchx84.Flatseal
   - name: com.github.wwmm.easyeffects
   - name: com.moonlight_stream.Moonlight
+  - name: com.logseq.Logseq
+    startup: true
   - name: com.microsoft.Teams
     startup: true
   - name: com.parsecgaming.parsec
