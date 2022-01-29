@@ -1,33 +1,34 @@
 ---
 applist:
-  - name: com.anydesk.Anydesk
-  - name: com.calibre_ebook.calibre
-  - name: com.discordapp.Discord
-  - name: com.github.Eloston.UngoogledChromium
-  - name: com.github.hluk.copyq
+  com.anydesk.Anydesk:
+  com.calibre_ebook.calibre:
+  com.discordapp.Discord:
+  com.github.Eloston.UngoogledChromium:
+  com.github.hluk.copyq:
     startup: true
-  - name: com.github.iwalton3.jellyfin-media-player
-  - name: com.github.iwalton3.jellyfin-mpv-shim
-  - name: com.github.tchx84.Flatseal
-  - name: com.github.wwmm.easyeffects
-  - name: com.moonlight_stream.Moonlight
-  - name: com.logseq.Logseq
+  com.github.iwalton3.jellyfin-media-player:
+  com.github.iwalton3.jellyfin-mpv-shim:
+  com.github.tchx84.Flatseal:
+  com.github.wwmm.easyeffects:
+  com.logseq.Logseq:
     startup: true
-  - name: com.microsoft.Teams
+  com.microsoft.Teams:
     startup: true
-  - name: com.parsecgaming.parsec
-  - name: info.mumble.Mumble
-  - name: io.freetubeapp.FreeTube
-  - name: io.mpv.Mpv
-  - name: me.kozec.syncthingtk
+  com.moonlight_stream.Moonlight:
+  com.parsecgaming.parsec:
+  com.usebottles.bottles:
+  info.mumble.Mumble:
+  io.freetubeapp.FreeTube:
+  io.mpv.Mpv:
+  me.kozec.syncthingtk:
     startup: true
-  - name: org.equeim.Tremotesf
-  - name: org.flameshot.Flameshot
+  org.equeim.Tremotesf:
+  org.flameshot.Flameshot:
     startup: true
-  - name: org.gnome.Extensions
-  - name: org.jdownloader.JDownloader
-  - name: org.keepassxc.KeePassXC
+  org.gnome.Extensions:
+  org.jdownloader.JDownloader:
+  org.keepassxc.KeePassXC:
     startup: true
-  - name: org.mozilla.Thunderbird
-  - name: org.onlyoffice
-  - name: org.telegram.desktop
+  org.mozilla.Thunderbird:
+  org.onlyoffice:
+  org.telegram.desktop:

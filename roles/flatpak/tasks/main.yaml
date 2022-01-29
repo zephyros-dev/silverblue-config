@@ -6,18 +6,5 @@
     state: present
 
 - name: Install flatpak packages
-  community.general.flatpak:
-    method: user
-    name:
-      - "{{ item.name }}"
-    state: present
-  loop: "{{ applist }}"
-
-- name: Add flatpak to startup programs
-  ansible.builtin.file:
-    src: "{{ home_dir }}/.local/share/flatpak/exports/share/applications/{{ item.name }}.desktop"
-    dest: "{{ home_dir }}/.config/autostart/{{ item.name }}.desktop"
-    state: link
-    mode: "0644"
-  loop: "{{ applist }}"
-  when: item.startup is defined and item.startup
+  include_tasks: flatpak.yaml
+  loop: "{{ applist | dict2items }}"

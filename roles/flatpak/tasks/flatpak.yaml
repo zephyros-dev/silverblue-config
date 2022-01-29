@@ -1,0 +1,14 @@
+- name: Install {{ item.key }} packages
+  community.general.flatpak:
+    method: user
+    name:
+      - "{{ item.key }}"
+    state: present
+
+- name: Add {{ item.key }} to startup programs
+  ansible.builtin.file:
+    src: "{{ home_dir }}/.local/share/flatpak/exports/share/applications/{{ item.key }}.desktop"
+    dest: "{{ home_dir }}/.config/autostart/{{ item.key }}.desktop"
+    state: link
+    mode: "0644"
+  when: item.value.startup is defined and item.value.startup
