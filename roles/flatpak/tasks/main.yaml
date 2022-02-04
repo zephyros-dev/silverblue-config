@@ -7,4 +7,4 @@
 
 - name: Install flatpak packages
   include_tasks: flatpak.yaml
-  loop: "{{ applist | dict2items }}"
+  loop: "{{ app_list | dict2items }}"

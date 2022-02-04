@@ -1,5 +1,5 @@
 ---
-applist:
+app_list:
   com.anydesk.Anydesk:
   com.calibre_ebook.calibre:
   com.discordapp.Discord:
@@ -17,6 +17,8 @@ applist:
   com.moonlight_stream.Moonlight:
   com.parsecgaming.parsec:
   com.usebottles.bottles:
+  com.valvesoftware.Steam:
+    state: absent
   info.mumble.Mumble:
   io.freetubeapp.FreeTube:
   io.mpv.Mpv:

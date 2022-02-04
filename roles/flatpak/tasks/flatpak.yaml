@@ -1,9 +1,30 @@
-- name: Install {{ item.key }} packages
+- name: Set installation state to present
+  ansible.builtin.set_fact:
+    install_state: present
+  when: >
+    (
+      not item.value.state is defined
+    ) 
+    or
+    (
+      item.value.state is defined 
+      and 
+      item.value.state == "present"
+    )
+
+- name: Set installation state to absent
+  ansible.builtin.set_fact:
+    install_state: absent
+  when:
+    - item.value.state is defined
+    - item.value.state == "absent"
+
+- name: Setup {{ item.key }} packages
   community.general.flatpak:
     method: user
     name:
       - "{{ item.key }}"
-    state: present
+    state: "{{ install_state }}"
 
 - name: Add {{ item.key }} to startup programs
   ansible.builtin.file:
@@ -11,4 +32,6 @@
     dest: "{{ home_dir }}/.config/autostart/{{ item.key }}.desktop"
     state: link
     mode: "0644"
-  when: item.value.startup is defined and item.value.startup
+  when:
+    - item.value.startup is defined
+    - item.value.startup
