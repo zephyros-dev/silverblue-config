@@ -17,6 +17,7 @@
     device:
       - /dev/net/tun
     generate_systemd:
+      new: true
       container_prefix: ""
       path: /etc/systemd/system
       pod_prefix: ""

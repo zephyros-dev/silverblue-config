@@ -5,8 +5,6 @@
       - ffmpeg-libs
       - fish
       - gnome-tweaks
-      - gnome-tweaks
-      - moby-engine
       - moby-engine
       - openssl
       - python-psutil

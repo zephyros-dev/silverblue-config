@@ -2,5 +2,4 @@ zerotier_volume: "{{ home_dir }}/volume/zerotier"
 zerotier_volume_data: "{{ zerotier_volume }}/data"
 zerotier_state: started
 zerotier_network_list: secret
-# zerotier_image: docker.io/zyclonite/zerotier:latest
 zerotier_image: docker.io/zerotier/zerotier:latest
